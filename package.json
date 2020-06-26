@@ -9,7 +9,7 @@
     "clean": "rm -rf node_modules build dist",
     "lint": "eslint . && flow",
     "build": "webpack --config ./webpack.main.prod.js --mode production && webpack --config ./webpack.renderer.prod.js --mode production",
-    "pack": "npm run build && electron-builder --dir",
+    "pack": "npm run build && electron-builder --publish always",
     "dist": "npm run build && electron-builder",
     "postinstall": "patch-package && electron-builder install-app-deps",
     "validate": "npm ls",
